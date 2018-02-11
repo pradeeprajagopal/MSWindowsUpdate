@@ -20,7 +20,7 @@ Function        Get-RunningService                                 1.0.0.0    MS
 Function        Post-PatchValidation                               1.0.0.0    MSwindowsupdate
 Function        Validate-PatchStatus                               1.0.0.0    MSwindowsupdate
 
-PS C:\WINDOWS\system32> Get-Help Validate-PatchStatus -Examples
+PS C:\WINDOWS\system32> Get-Help Validate-PatchStatus -Full
 
 NAME
     Validate-PatchStatus
@@ -29,6 +29,33 @@ SYNOPSIS
     This function will get the Number of Patches missing on the remote server and If there is any reboot pending due
     to patching.
 
+
+SYNTAX
+    Validate-PatchStatus [-File] <String> [<CommonParameters>]
+
+
+DESCRIPTION
+
+
+PARAMETERS
+    -File <String>
+        Specify the File Path Containing Server List
+
+        Required?                    true
+        Position?                    1
+        Default value
+        Accept pipeline input?       false
+        Accept wildcard characters?  false
+
+    <CommonParameters>
+        This cmdlet supports the common parameters: Verbose, Debug,
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,
+        OutBuffer, PipelineVariable, and OutVariable. For more information, see
+        about_CommonParameters (https:/go.microsoft.com/fwlink/?LinkID=113216).
+
+INPUTS
+
+OUTPUTS
 
     -------------------------- EXAMPLE 1 --------------------------
 
@@ -71,7 +98,8 @@ SYNOPSIS
 
     PS C:\Windows\system32>Validate-PatchStatus -File "C:\temp\Servers.txt" | Export-Csv C:\Temp\Output.csv
 
-PS C:\WINDOWS\system32> Get-Help Post-PatchValidation -Examples
+
+PS C:\WINDOWS\system32> Get-Help Post-PatchValidation -Full
 
 NAME
     Post-PatchValidation
@@ -79,6 +107,33 @@ NAME
 SYNOPSIS
     This function will help you validate the servers after Patch installation
 
+
+SYNTAX
+    Post-PatchValidation [-File] <String> [<CommonParameters>]
+
+
+DESCRIPTION
+
+
+PARAMETERS
+    -File <String>
+        Specify the File Path Containing Server List
+
+        Required?                    true
+        Position?                    1
+        Default value
+        Accept pipeline input?       false
+        Accept wildcard characters?  false
+
+    <CommonParameters>
+        This cmdlet supports the common parameters: Verbose, Debug,
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,
+        OutBuffer, PipelineVariable, and OutVariable. For more information, see
+        about_CommonParameters (https:/go.microsoft.com/fwlink/?LinkID=113216).
+
+INPUTS
+
+OUTPUTS
 
     -------------------------- EXAMPLE 1 --------------------------
 
@@ -131,7 +186,8 @@ SYNOPSIS
 
     PS C:\Windows\system32>Post-PatchValidation -File "C:\temp\Servers.txt" | Export-Csv C:\Temp\Output.csv
 
-PS C:\WINDOWS\system32> Get-Help Get-RunningService -Examples
+
+PS C:\WINDOWS\system32> Get-Help Get-RunningService -Full
 
 NAME
     Get-RunningService
@@ -141,6 +197,33 @@ SYNOPSIS
     stored in C:\Windows\Temp\PrePatch_Service.txt
 
 
+SYNTAX
+    Get-RunningService [-File] <String> [<CommonParameters>]
+
+
+DESCRIPTION
+
+
+PARAMETERS
+    -File <String>
+        Specify the File Path Containing Server List
+
+        Required?                    true
+        Position?                    1
+        Default value
+        Accept pipeline input?       false
+        Accept wildcard characters?  false
+
+    <CommonParameters>
+        This cmdlet supports the common parameters: Verbose, Debug,
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,
+        OutBuffer, PipelineVariable, and OutVariable. For more information, see
+        about_CommonParameters (https:/go.microsoft.com/fwlink/?LinkID=113216).
+
+INPUTS
+
+OUTPUTS
+
     -------------------------- EXAMPLE 1 --------------------------
 
     PS C:\>Get-RunningService -File "C:\temp\Servicetest.txt"
@@ -149,5 +232,4 @@ SYNOPSIS
     Info : Providing Sufficent time for the execution
 
     Status :Total:5 | Success:5 | Failure:0
-
 
