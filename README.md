@@ -1,9 +1,13 @@
 # MSWindowsUpdate
 
+This Module will help in Auditing Patches across Windows Environment and Validating the Services before and After Patch Reboot.
+
 Create a Folder named MSWindowsUpdate under C:\Windows\System32\WindowsPowerShell\v1.0\Modules
 Place PSM1 and PSD1 File
 
-To Start using Launch Powershell as Administrator and if required execute Set-Executionpolicy Unrestrcted -Force
+To Start using Launch Powershell as Administrator and if required execute 
+
+Set-Executionpolicy Unrestrcted -Force
 
 Import-Module MSWindowsUpdate -DisableNameChecking
 
