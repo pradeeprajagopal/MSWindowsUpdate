@@ -6,9 +6,10 @@ Create a Folder named MSWindowsUpdate under C:\Windows\System32\WindowsPowerShel
 Place PSM1 and PSD1 File
 
 To Start using Launch Powershell as Administrator and if required execute 
-
+(Optional)
 Set-Executionpolicy Unrestrcted -Force
 
+(Mandatory)
 Import-Module MSWindowsUpdate -DisableNameChecking
 
 PS C:\WINDOWS\system32> get-command -Module MSwindowsupdate
