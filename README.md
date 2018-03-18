@@ -233,3 +233,165 @@ OUTPUTS
 
     Status :Total:5 | Success:5 | Failure:0
 
+PS C:\WINDOWS\system32> Get-Help Restart-WindowsServer -Full
+
+NAME
+    Restart-WindowsServer
+
+SYNOPSIS
+    This function will restart the windows computer based on the Input file in Parallel with optional paramaters like sleep time and Throttlelimit
+
+
+SYNTAX
+    Restart-WindowsServer [[-InputFile] <String>] [[-Parallel] <Int32>] [[-Sleep] <Int32>] [[-OutputFile] <String>] [<CommonParameters>]
+
+
+DESCRIPTION
+
+
+PARAMETERS
+    -InputFile <String>
+
+        Required?                    false
+        Position?                    1
+        Default value
+        Accept pipeline input?       false
+        Accept wildcard characters?  false
+
+    -Parallel <Int32>
+
+        Required?                    false
+        Position?                    2
+        Default value                10
+        Accept pipeline input?       false
+        Accept wildcard characters?  false
+
+    -Sleep <Int32>
+
+        Required?                    false
+        Position?                    3
+        Default value                600
+        Accept pipeline input?       false
+        Accept wildcard characters?  false
+
+    -OutputFile <String>
+
+        Required?                    false
+        Position?                    4
+        Default value                "C:\Windows\Temp\Restart_Status_$(Get-date -Format MMddyyyy).csv"
+        Accept pipeline input?       false
+        Accept wildcard characters?  false
+
+    <CommonParameters>
+        This cmdlet supports the common parameters: Verbose, Debug,
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,
+        OutBuffer, PipelineVariable, and OutVariable. For more information, see
+        about_CommonParameters (https:/go.microsoft.com/fwlink/?LinkID=113216).
+
+INPUTS
+
+OUTPUTS
+
+    -------------------------- EXAMPLE 1 --------------------------
+
+    PS C:\Windows\system32>Restart-WindowsServer -InputFile "C:\temp\Servers.txt" -OutputFile "C:\Windows\temp\Output.csv"
+
+    -------------------------- EXAMPLE 2 --------------------------
+
+    PS C:\Windows\system32>Restart-WindowsServer -InputFile "C:\temp\Servers.txt" -Parallel 25 -Sleep 300
+
+
+PS C:\WINDOWS\system32> Get-Help Get-PatchReport -Full
+
+NAME
+    Get-PatchReport
+
+SYNOPSIS
+    This function will help you get the Patch Report from the Input file and Exports the content to output file
+
+
+SYNTAX
+    Get-PatchReport [[-InputFile] <String>] [[-OutputFile] <String>] [<CommonParameters>]
+
+
+DESCRIPTION
+
+
+PARAMETERS
+    -InputFile <String>
+
+        Required?                    false
+        Position?                    1
+        Default value
+        Accept pipeline input?       false
+        Accept wildcard characters?  false
+
+    -OutputFile <String>
+
+        Required?                    false
+        Position?                    2
+        Default value
+        Accept pipeline input?       false
+        Accept wildcard characters?  false
+
+    <CommonParameters>
+        This cmdlet supports the common parameters: Verbose, Debug,
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,
+        OutBuffer, PipelineVariable, and OutVariable. For more information, see
+        about_CommonParameters (https:/go.microsoft.com/fwlink/?LinkID=113216).
+
+INPUTS
+
+OUTPUTS
+
+    -------------------------- EXAMPLE 1 --------------------------
+
+    PS C:\Windows\system32>Get-PatchReport -InputFile "C:\temp\Servers.txt" -OutputFile "C:\Windows\temp\Output.csv"
+    
+
+PS C:\WINDOWS\system32> Get-Help Install-MSWindowsUpdate -Full
+
+NAME
+    Install-MSWindowsUpdate
+
+SYNOPSIS
+    This function will install the patches on servers based on input file. This will install all missing patches
+
+
+SYNTAX
+    Install-MSWindowsUpdate [[-Inputfile] <String>] [[-Throttle] <Int32>] [<CommonParameters>]
+
+
+DESCRIPTION
+
+
+PARAMETERS
+    -Inputfile <String>
+
+        Required?                    false
+        Position?                    1
+        Default value
+        Accept pipeline input?       false
+        Accept wildcard characters?  false
+
+    -Throttle <Int32>
+
+        Required?                    false
+        Position?                    2
+        Default value                10
+        Accept pipeline input?       false
+        Accept wildcard characters?  false
+
+    <CommonParameters>
+        This cmdlet supports the common parameters: Verbose, Debug,
+        ErrorAction, ErrorVariable, WarningAction, WarningVariable,
+        OutBuffer, PipelineVariable, and OutVariable. For more information, see
+        about_CommonParameters (https:/go.microsoft.com/fwlink/?LinkID=113216).
+
+INPUTS
+
+OUTPUTS
+
+    -------------------------- EXAMPLE 1 --------------------------
+
+    PS C:\Windows\system32>Install-MSWindowsUpdate -InputFile "C:\temp\Servers.txt"
