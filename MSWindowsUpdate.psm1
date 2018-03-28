@@ -2,11 +2,12 @@
 ########################################################################
 # Module : MS Windows Update
 # Author : Pradeep Rajagopal
-# Version: 1.0.0.0
-# Version History : 1.0.0.0
+# Version: 2.0.0.0
+# Version History : 2.0.0.0
 #                  : Three Commandlets Get-RunningService
 #                                      Validate-PatchStatus
 #                                      Post-PatchValidation
+#                  : Added three more function
 ######################################################################### 
 
 Function Get-RunningService
